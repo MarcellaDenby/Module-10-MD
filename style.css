@@ -1,0 +1,204 @@
+/* Border Box */
+* {
+    box-sizing: border-box;
+}
+
+/* CSS Grid for Desktop and Tablet and CSS Flex for Mobile and Small Screens */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+
+}
+@media (min-width: 768px) {
+    .container {
+        display: grid; 
+        grid-template-columns: repeat(2,  1fr);
+        gap: 15px;
+    } 
+}
+@media (max-width: 767px) {
+    .container {
+        display: flex; 
+        flex-direction: column;
+        
+    } 
+}
+/* Body includes font and style, Media shows the changes based on viewport */
+body {
+    background-color: #082B59;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+    
+    @media (min-width: 600px) {
+        body {
+            font-size: 18px;
+            background-color: #082B59;
+        }
+    } 
+    @media (max-width: 599px) {
+        body{
+            font-size: 14px;
+            background-color: #082B59;
+        }
+    }
+    /* This makes the images responsive, 
+    block to behave like a block element, 
+    width and height 100% to fill container, 
+    auto to manage aspect ratio and not distort image */
+    picture {
+        display: block;
+        max-width: 100%;
+    }
+    picture img {
+        width: 100%;
+        height: auto;
+    }
+  }
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: #59331d;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    border-bottom: 10px solid #d98555;
+  }
+  /* navbar styling */
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+  }
+  /* max width on the image in pixels */
+  nav .logo img {
+    max-width: 150px;
+  }
+  /* flex basis on the image container, li */
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  nav a:hover {
+    color: #d98555;
+  }
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  article {
+    flex-basis: 73%;
+  }
+  figure {
+    margin: 3rem 0 0 0;
+    flex-basis: 25%;
+    background-color: #59331d;
+    border-radius: 10px;
+  }
+  figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  figcaption {
+    color: #f2f2f2;
+    padding: 0.5rem;
+  }
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #59331D;
+    border-radius: 10px;
+    padding: .05rem 1rem;
+    margin: 0px;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: 3px solid #59331d;
+
+  }
+  .button:hover {
+    background-color: #f2f2f2;
+    color: #59331d;
+  }
+  footer {
+    background-color: #082B59;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    border-top: 10px solid #d98555;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer li {
+    margin: 0 10px;
+  }
+
+  footer a {
+    color: #f2f2f2;
+    font-size: 2rem;
+    text-decoration: none;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+  }
+  footer a: hover {
+color: #d98555
+  }
